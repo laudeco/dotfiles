@@ -10,6 +10,8 @@ brew 'thefuck'
 brew 'wget'
 brew 'zsh'
 brew 'zsh-completions'
+brew 'libtiff' 
+brew 'libtool'
 
 cask 'calibre'
 cask 'firefox'

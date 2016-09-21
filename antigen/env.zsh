@@ -1,18 +1,20 @@
 ## Antigen
 antigen use oh-my-zsh
 
-### Bundles
-antigen bundle git
-antigen bundle brew
-antigen bundle docker
-antigen bundle symfony2
-antigen bundle osx
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions src
-antigen bundle zsh-users/zsh-autosuggestions
-
 ### Theme
 antigen theme steeef
+
+### Bundles
+antigen bundles <<EOBUNDLES
+git
+brew
+docker
+symfony2
+osx
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions src
+zsh-users/zsh-autosuggestions
+EOBUNDLES
 
 ### Applying Antigen config
 antigen apply

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd "$(dirname "$0")"
+
 source ./helpers/verbosity.sh
 
 echo 'Reading docker-machine info' >&1
