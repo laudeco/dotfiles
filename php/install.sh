@@ -8,7 +8,7 @@ curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
 # Set temporary php path
 export PATH="/usr/local/php5/bin:$PATH"
 
-sudo ln -sfn php.ini /usr/local/php5/php.d/99-liip-developer.ini
+sudo ln -sfn $(pwd)/php.ini /usr/local/php5/php.d/99-liip-developer.ini
 
 # Install composer
 php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
