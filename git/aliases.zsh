@@ -8,6 +8,7 @@ fi
 
 # The rest of my fun git aliases
 alias gpull='git pull --prune --rebase'
+alias gpul=gpull
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gp='git push origin HEAD'
 alias gd='git diff'
