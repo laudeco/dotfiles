@@ -6,8 +6,6 @@ antigen theme steeef
 
 ### Bundles
 antigen bundles <<EOBUNDLES
-git
-brew
 docker
 symfony2
 osx
