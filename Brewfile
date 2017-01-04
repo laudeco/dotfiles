@@ -12,6 +12,8 @@ brew 'zsh'
 brew 'zsh-completions'
 brew 'libtiff' 
 brew 'libtool'
+brew 'youtube-dl'
+brew 'ssh-audit'
 
 cask 'calibre'
 cask 'firefox'
