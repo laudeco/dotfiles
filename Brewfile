@@ -4,6 +4,12 @@ tap 'caskroom/cask'
 tap 'homebrew/bundle'
 tap 'caskroom/versions'
 
+# necessary for homebrew/php
+tap 'homebrew/dupes'
+tap 'homebrew/versions'
+# necessary for php-cs-fixer
+tap 'homebrew/php'
+
 brew 'coreutils'
 brew 'dnsmasq'
 brew 'thefuck'
@@ -14,6 +20,7 @@ brew 'libtiff'
 brew 'libtool'
 brew 'youtube-dl'
 brew 'ssh-audit'
+brew 'php-cs-fixer'
 
 cask 'calibre'
 cask 'firefox'

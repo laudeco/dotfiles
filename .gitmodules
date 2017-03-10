@@ -1,3 +1,4 @@
 [submodule "antigen.symlink"]
 	path = antigen.symlink
 	url = https://github.com/zsh-users/antigen.git
+    branch = 0bc49f9c9bfd9bbd78e29a2dc1c3f29f9b9a1227
