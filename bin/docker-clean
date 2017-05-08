@@ -1,0 +1,3 @@
+
+# clean the env docker
+dockerkillall && dockercleanc &&  dockercleani && dockerclean
