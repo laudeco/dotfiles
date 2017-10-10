@@ -17,6 +17,9 @@ brew 'ssh-audit'
 brew 'maven'
 brew 'exa'
 
+brew 'gnupg2'
+brew 'gpg-agent'
+
 cask 'calibre'
 cask 'firefox'
 cask 'hipchat'
