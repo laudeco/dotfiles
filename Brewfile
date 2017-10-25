@@ -13,6 +13,7 @@ brew 'zsh-completions'
 brew 'libtiff' 
 brew 'libtool'
 brew 'yarn'
+brew 'node'
 
 brew 'gnupg2'
 brew 'gpg-agent'
