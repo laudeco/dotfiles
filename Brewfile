@@ -35,3 +35,7 @@ cask 'spotify-notifications'
 cask 'evernote'
 cask 'mysqlworkbench'
 cask 'spectacle'
+cask 'keybase'
+cask 'tripmode'
+cask 'lastpass'
+
