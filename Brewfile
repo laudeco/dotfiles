@@ -14,9 +14,10 @@ brew 'libtiff'
 brew 'libtool'
 brew 'yarn'
 brew 'node'
-
 brew 'gnupg2'
 
+
+cask 'phpstorm'
 cask 'calibre'
 cask 'firefox'
 cask 'iterm2'
