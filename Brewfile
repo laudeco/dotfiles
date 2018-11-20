@@ -37,4 +37,4 @@ cask 'keybase'
 cask 'tripmode'
 cask 'dropbox'
 cask 'dash'
-cask 'docker-toolbox'
+
