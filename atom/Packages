@@ -1,0 +1,16 @@
+atom-beautify
+highlight-selected
+minimap
+set-syntax
+atom-material-ui
+atom-material-syntax
+autocomplete-paths
+
+language-docker
+
+markdown-preview
+
+autosave-onchange
+
+atom-ide-ui
+ide-php
