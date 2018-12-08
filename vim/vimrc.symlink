@@ -5,4 +5,4 @@ filetype indent plugin on
 
 colorscheme darkblue  
 au InsertLeave * colorscheme darkblue  
-au InsertEnter * colorscheme molokai 
+au InsertEnter * colorscheme darkblue 
