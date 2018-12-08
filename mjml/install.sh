@@ -21,8 +21,3 @@ then
 	fi	
 
 fi
-
-version=$(mjml --version)
-echo "MJML V.$version installed"
-
-exit 0
