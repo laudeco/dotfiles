@@ -14,6 +14,7 @@ brew 'libtiff'
 brew 'libtool'
 brew 'yarn'
 brew 'gnupg2'
+brew 'getantibody/tap/antibody'
 
 cask 'phpstorm'
 cask 'calibre'

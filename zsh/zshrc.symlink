@@ -1,11 +1,16 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
-export ADOTDIR=$HOME/.antigen_workdir
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Dev
 
 export UPDATE_ZSH_DAYS=1
+
+# Load antibody zsh plugins
+if [[ -a ~/.zsh_plugins.sh ]]
+then
+  source ~/.zsh_plugins.sh
+fi
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
