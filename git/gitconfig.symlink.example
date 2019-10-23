@@ -6,6 +6,7 @@
 [user]
         name = AUTHORNAME
         email = AUTHOREMAIL
+        signingkey = AUTHORSIGNKEY
 [credential]
         helper = GIT_CREDENTIAL_HELPER
 [alias]
@@ -59,4 +60,7 @@
 	    cmd = /usr/local/bin/pstorm merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 	    trustExitCode = true
 [fetch]
-	prune = true
+	    prune = true
+
+[gpg]
+      program = /usr/local/bin/gpg
