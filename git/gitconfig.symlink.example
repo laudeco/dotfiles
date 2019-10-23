@@ -40,6 +40,7 @@
         default = simple
 [commit]
 	     template = /.gitmessage.txt
+       gpgsign = true
 
 [diff]
         tool = pstorm
