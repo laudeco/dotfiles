@@ -1,0 +1,10 @@
+robbyrussell/oh-my-zsh path:plugins/docker
+
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions src
+zsh-users/zsh-autosuggestions
+
+paulirish/git-open
+
+# Theme - https://github.com/danihodovic/steeef
+danihodovic/steeef
