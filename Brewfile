@@ -15,6 +15,7 @@ brew 'libtool'
 brew 'yarn'
 brew 'gnupg2'
 brew 'getantibody/tap/antibody'
+brew 'python'
 
 cask 'phpstorm'
 cask 'calibre'

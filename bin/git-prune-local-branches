@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# A quick way to remove local branches that were merged and removed on remote
+# server. This will NOT remove local branches that were never pushed to remote!
+#
+
+git fetch --prune && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
