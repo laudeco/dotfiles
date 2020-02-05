@@ -1,0 +1,9 @@
+#!/bin/bash
+
+YELLOW="\033[0;33m"
+RED="\033[31m"
+RESET="\033[0m"
+DOCKER_CLOCK_SOURCE=$(docker exec -ti adsdaq_php_1 /bin/bash -c 'cat /sys/devices/system/clocksource/clocksource0/current_clocksource | tr -d "[:space:]"')
+if [[ ${DOCKER_CLOCK_SOURCE} != "tsc" ]]; then
+    echo -e "${RED}WARNING!${RESET} - ${YELLOW}Clock drift detected. Please restart Docker Desktop to avoid severe performance issues${RESET}"
+fi
