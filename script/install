@@ -6,8 +6,14 @@ set -e
 cd "$(dirname $0)"/..
 
 # Run Homebrew through the Brewfile
-echo "› brew bundle"
-brew bundle
+echo "> packages & applications"
+sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install $(grep -vE "^\s*#" packages.apt  | tr "\n" " ")
+sudo DEBIAN_FRONTEND=noninteractive apt-get -yq upgrade
+
+# Run snap
+echo "> snap packages "
+sudo snap install $(grep -vE "^\s*#" packages.snap  | tr "\n" " ") || true
+sudo snap refresh
 
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do echo "Installing ${installer} ... " && sh -c "${installer}" ; done

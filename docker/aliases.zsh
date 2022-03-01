@@ -1,6 +1,3 @@
-alias dm='docker-machine'
-alias adl-eval='eval $(docker-machine env adlogix-dev)'
-
 # Kill all running containers.
 alias dockerkillall='docker kill $(docker ps -q)'
 
