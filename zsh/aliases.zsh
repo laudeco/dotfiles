@@ -1,5 +1,4 @@
 alias reload!='. ~/.zshrc'
-alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 alias hosts="sudo vi /etc/hosts"
 
 

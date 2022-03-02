@@ -40,6 +40,9 @@ done
 autoload -U compinit
 compinit
 
+autoload -U promptinit
+promptinit
+
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
@@ -47,3 +50,18 @@ do
 done
 
 unset config_files
+
+# theme
+
+## Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+## Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats 'on branch %b'
+
+## Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+NEWLINE=$'\n'
+PROMPT='%F{green}%n%f@%F{magenta}%m%f > %K{214}%F{233}${PWD/#$HOME/~}%f%k ${NEWLINE}%D %T > '
+RPROMPT=\$vcs_info_msg_0_
