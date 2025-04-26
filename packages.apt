@@ -1,10 +1,12 @@
+google-chrome-stable
 thefuck
 wget
 python3-distutils
 zsh
 zsh-autosuggestions
 
-firefox
 vlc
 pgadmin4-desktop
 atom
+
+vim

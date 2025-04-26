@@ -1,0 +1,48 @@
+#!/bin/sh
+
+# Script to configure kubectl
+# Author : Yves Mottry
+
+case $1 in
+"dev2"|"DEV2")
+  kubectl config use-context obe-labs
+  NS=dev-orange-2021-06
+  ;;
+"sit"|"SIT")
+  kubectl config use-context obe-labs
+  NS=sit
+  ;;
+"sitjqs"|"SITJQS")
+  kubectl config use-context obe-labs
+  NS=staging-orange-2021-05-jqs
+  ;;
+"staging"|"STAGING"|"stg"|"STG")
+  kubectl config use-context obe-labs
+  NS=staging
+  ;;
+"UAT1"|"uat1")
+  kubectl config use-context obe-uat
+  NS=uat-orange-2021-04
+  ;;
+"UAT1JQS"|"uat1jqs")
+  kubectl config use-context obe-uat
+  NS=uat-orange-2021-04-jqs
+  ;;
+"UAT2"|"uat2")
+  kubectl config use-context obe-uat
+  NS=uat-orange-2021-05
+  ;;
+"UAT2JQS"|"uat2jqs")
+  kubectl config use-context obe-uat
+  NS=uat-orange-2021-05-jqs
+  ;;
+*)
+  echo "Environement not known"
+  exit
+  ;;
+esac
+
+CONSUL=`kubectl get pods -n $NS | grep consul | grep -v mocktool | awk '{ print $1 }' | sort | head -1`
+echo "Consul password(s):"
+kubectl -n $NS get secret -o yaml | egrep "token|bootstrap-acl-token" | grep -B1 bootstrap | awk 'BEGIN { FS = ": " }{ print $2 }' | paste -d " " - - | awk '{ "echo "$1" | base64 -d" | getline BASE64; printf "%65s %s\n", $2, BASE64 }'
+kubectl -n $NS port-forward $CONSUL 8600:8500

@@ -20,6 +20,7 @@ then
   source ~/.localrc
 fi
 
+
 # all of our zsh files
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
@@ -65,3 +66,7 @@ setopt PROMPT_SUBST
 NEWLINE=$'\n'
 PROMPT='%F{green}%n%f@%F{magenta}%m%f > %K{214}%F{233}${PWD/#$HOME/~}%f%k ${NEWLINE}%D %T > '
 RPROMPT=\$vcs_info_msg_0_
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
